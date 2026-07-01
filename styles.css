@@ -1,8 +1,8 @@
 :root {
   --title-font: "Bitcount Single";
   --shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
-  --primary-color: rgb(203, 159, 58);
-  --secondary-color: rgb(255, 129, 101);
+  --primary-color: rgb(209, 159, 40);
+  --secondary-color: rgb(255, 255, 255);
   --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
   --ease-in: cubic-bezier(0.75, 0, 1, 1);
   --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -28,7 +28,7 @@ body {
 }
 
 .background-decoration {
-  background-color: var(--primary-color);
+  background: linear-gradient(rgb(255, 255, 255), var(--primary-color));
   width: 100vw;
   min-height: 25vh;
   position: fixed;
@@ -90,11 +90,31 @@ ul {
   display: flex;
   justify-content: center;
   min-width: 400px;
-  box-shadow: var(--shadow);
 }
 
 .about-img-container img {
   object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+@media (hover: hover) {
+  .about-img-container img {
+    transition: transform 100ms;
+  }
+  @keyframes idle-animation {
+    0% {
+      transform: rotate(1deg);
+    }
+    100% {
+      transform: rotate(-1deg);
+    }
+  }
+
+  .about-img-container img:hover {
+    transform: rotate(1deg);
+    animation: idle-animation 200ms infinite alternate var(--ease-in-out);
+    animation-delay: 100ms;
+  }
 }
 
 .about-img-container h1 {
@@ -161,8 +181,8 @@ ul {
 /* FOOTER */
 
 footer {
-  box-shadow: var(--shadow);
-  background: var(--secondary-color);
+  /* box-shadow: var(--shadow); */
+  background: linear-gradient(white, white, rgb(177, 174, 174));
 }
 
 .contact-me {
