@@ -1,0 +1,200 @@
+:root {
+  --title-font: "Bitcount Single";
+  --shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+  --primary-color: rgb(203, 159, 58);
+  --secondary-color: rgb(255, 129, 101);
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in: cubic-bezier(0.75, 0, 1, 1);
+  --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease: cubic-bezier(0.44, 0.21, 0, 1);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+}
+
+.background-decoration {
+  background-color: var(--primary-color);
+  width: 100vw;
+  min-height: 25vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform-origin: bottom;
+  transform: rotate(6deg) scale(3);
+  box-shadow: var(--shadow);
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px;
+}
+
+/* SHARED */
+h1,
+h2 {
+  font-family: var(--title-font);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about .icons,
+.project-cards .icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.icon {
+  will-change: transform;
+  transition: transform 500ms var(--ease-out);
+}
+
+.icon:hover {
+  cursor: pointer;
+  transform: rotate(10deg);
+}
+/* HEADER */
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.about-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: 350px;
+  box-shadow: var(--shadow);
+}
+
+.about-img-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-img-container h1 {
+  bottom: 0;
+  position: absolute;
+  color: white;
+  font-family: var(--title-font);
+  font-size: 3rem;
+  box-shadow: var(--shadow);
+}
+
+.about {
+  background-color: white;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* PROJECTS */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 20px 0;
+}
+.project-cards .card {
+  background-color: white;
+  box-shadow: var(--shadow);
+  will-change: transform;
+  transition: transform 400ms var(--ease-out);
+}
+
+.project-cards .card:hover {
+  background-color: white;
+  box-shadow: var(--shadow);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.project-cards .project-image {
+  min-height: 250px;
+  background-image:
+    url(./images/orange-gradient.webp), url(./images/orange-gradient.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-cards .overview {
+  padding: 20px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-cards .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* FOOTER */
+
+footer {
+  box-shadow: var(--shadow);
+  background: var(--secondary-color);
+}
+
+.contact-me {
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+  padding: 50px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.contact-me .contact-image {
+  min-width: 50%;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
+.contact-me .contact-info {
+  min-width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-me .contact-info li {
+  display: flex;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.contact-me .icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
