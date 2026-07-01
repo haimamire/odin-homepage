@@ -18,7 +18,18 @@
     <main>
       <header>
         <div class="about-img-container">
-          <img src="./images/me.JPG" alt="Ivan Matusevich" />
+          <picture>
+            <source
+              srcset="./images/me-small.webp"
+              media="(max-width: 1000px)"
+            />
+            <source
+              srcset="./images/me-small.JPG"
+              media="(max-width: 1000px)"
+            />
+            <source srcset="./images/me.webp" />
+            <img src="./images/me.JPG" alt="Ivan Matusevich" />
+          </picture>
           <h1 aria-hidden="true">IVÁN</h1>
         </div>
         <div class="about">
@@ -231,11 +242,22 @@
             </a>
           </div>
         </div>
-        <img
-          src="./images/riverside.jpg"
-          alt="Ivan with his family on the riverside"
-          class="contact-image"
-        />
+        <picture>
+          <source
+            srcset="./images/riverside-small.webp"
+            media="(max-width: 1000px)"
+          />
+          <source
+            srcset="./images/riverside-small.jpg"
+            media="(max-width: 1000px)"
+          />
+          <source srcset="./images/riverside.webp" />
+          <img
+            src="./images/riverside.jpg"
+            alt="Ivan with his family on the riverside"
+            class="contact-image"
+          />
+        </picture>
       </section>
     </footer>
   </body>
