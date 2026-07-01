@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta name="description" content="Ivan Matusevich's personal blog" />
     <meta name="author" content="Ivan Matusevich" />
     <title>Homepage</title>
@@ -16,7 +19,7 @@
     />
   </head>
   <body>
-    <div class="background-decoration"></div>
+    <div class="header-decoration"></div>
     <main>
       <header>
         <div class="about">
@@ -204,66 +207,69 @@
         </div>
       </section>
     </main>
-    <footer>
-      <section class="contact-me">
-        <div class="contact-info">
-          <h1 tabindex="0">Contact me</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum numquam
-            hic, optio eos nisi minus voluptatibus quam id accusamus nobis
-            nesciunt voluptate veniam aliquid odio quidem harum. Sint,
-            laboriosam sed.
-          </p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-          <ul aria-label="Contact information">
-            <li aria-label="Phone number">
-              <img src="./icons/phone.svg" alt="" width="20px" />070-9145-3116
-            </li>
-            <li aria-label="Email address">
-              <img src="./icons/mail.svg" alt="" width="20px" />jane@doe.com
-            </li>
-          </ul>
-          <div class="icons">
-            <a class="icon" href="" title="GitHub">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-                alt=""
-                width="30px"
-              />
-            </a>
-            <a class="icon" href="" title="LinkedIn">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
-                alt=""
-                width="30px"
-              />
-            </a>
-            <a class="icon" href="" title="X (formerly known as Twitter)">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
-                alt=""
-                width="30px"
-              />
-            </a>
+    <div class="bottom-container">
+      <div class="footer-decoration"></div>
+      <footer>
+        <section class="contact-me">
+          <div class="contact-info">
+            <h1 tabindex="0">Contact me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              numquam hic, optio eos nisi minus voluptatibus quam id accusamus
+              nobis nesciunt voluptate veniam aliquid odio quidem harum. Sint,
+              laboriosam sed.
+            </p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <ul aria-label="Contact information">
+              <li aria-label="Phone number">
+                <img src="./icons/phone.svg" alt="" width="20px" />070-9145-3116
+              </li>
+              <li aria-label="Email address">
+                <img src="./icons/mail.svg" alt="" width="20px" />jane@doe.com
+              </li>
+            </ul>
+            <div class="icons">
+              <a class="icon" href="" title="GitHub">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                  alt=""
+                  width="30px"
+                />
+              </a>
+              <a class="icon" href="" title="LinkedIn">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
+                  alt=""
+                  width="30px"
+                />
+              </a>
+              <a class="icon" href="" title="X (formerly known as Twitter)">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
+                  alt=""
+                  width="30px"
+                />
+              </a>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source
-            srcset="./images/riverside-small.webp"
-            media="(max-width: 1000px)"
-          />
-          <source
-            srcset="./images/riverside-small.jpg"
-            media="(max-width: 1000px)"
-          />
-          <source srcset="./images/riverside.webp" />
-          <img
-            src="./images/riverside.jpg"
-            alt="Ivan with his family on his hometown"
-            class="contact-image"
-          />
-        </picture>
-      </section>
-    </footer>
+          <picture>
+            <source
+              srcset="./images/riverside-small.webp"
+              media="(max-width: 1000px)"
+            />
+            <source
+              srcset="./images/riverside-small.jpg"
+              media="(max-width: 1000px)"
+            />
+            <source srcset="./images/riverside.webp" />
+            <img
+              src="./images/riverside.jpg"
+              alt="Ivan with his family on his hometown"
+              class="contact-image"
+            />
+          </picture>
+        </section>
+      </footer>
+    </div>
   </body>
 </html>

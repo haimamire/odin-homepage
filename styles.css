@@ -1,8 +1,7 @@
 :root {
   --title-font: "Bitcount Single";
-  --shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
-  --primary-color: rgb(209, 159, 40);
-  --secondary-color: rgb(255, 255, 255);
+  --shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  --primary-color: rgb(180, 126, 3);
   --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
   --ease-in: cubic-bezier(0.75, 0, 1, 1);
   --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -19,6 +18,7 @@
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  /* overscroll-behavior: none; */
 }
 
 body {
@@ -27,8 +27,8 @@ body {
   isolation: isolate;
 }
 
-.background-decoration {
-  background: linear-gradient(rgb(255, 255, 255), var(--primary-color));
+.header-decoration {
+  background: linear-gradient(white, var(--primary-color));
   width: 100vw;
   min-height: 25vh;
   position: fixed;
@@ -37,7 +37,7 @@ body {
   z-index: -1;
   transform-origin: bottom;
   transform: rotate(6deg) scale(3);
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow); */
 }
 
 main {
@@ -46,7 +46,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding: 100px 70px;
+  padding: 100px 70px 0;
+  isolation: isolate;
+  z-index: 0;
 }
 
 /* SHARED */
@@ -181,9 +183,28 @@ ul {
 
 /* FOOTER */
 
+.bottom-container {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  z-index: 1;
+  padding-top: 300px;
+}
+
 footer {
-  /* box-shadow: var(--shadow); */
-  background: linear-gradient(white, white, rgb(177, 174, 174));
+  background: linear-gradient(white, rgb(196, 193, 193));
+  isolation: isolate;
+  z-index: 1;
+}
+
+.footer-decoration {
+  min-height: 200px;
+  min-width: 100px;
+  background-color: white;
+  transform: rotate(6deg) scale(2) translateY(-30px);
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .contact-me {
@@ -252,6 +273,14 @@ footer {
     top: 0;
     right: -125px;
   }
+
+  .bottom-container {
+    padding-top: 100px;
+  }
+
+  .footer-decoration {
+    transform: rotate(6deg) scale(2) translateY(30px);
+  }
 }
 
 @media (max-width: 600px) {
@@ -283,5 +312,13 @@ footer {
 
   .contact-info {
     padding: 20px 20px 0;
+  }
+
+  .bottom-container {
+    padding-top: 80px;
+  }
+
+  .footer-decoration {
+    transform: rotate(6deg) scale(2) translateY(30px);
   }
 }
